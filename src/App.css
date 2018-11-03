@@ -12,6 +12,10 @@
 
 }
 
+*:focus{
+  outline: none !important;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,6 +35,10 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+}
+
+li{
+  list-style: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -135,6 +143,7 @@ div#side {
   -webkit-box-shadow: 8px 6px 57px -6px rgba(0,0,0,0.75);
 -moz-box-shadow: 8px 6px 57px -6px rgba(0,0,0,0.75);
 box-shadow: 8px 6px 57px -6px rgba(0,0,0,0.75);
+z-index: 999;
 }
 
 .logo-side {
@@ -177,4 +186,161 @@ div#side nav ul li {
 
 .dn{
   display: none;
+}
+
+.poke-image {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: -15px 18px 47px -17px rgba(0,0,0,0.75);
+  position: relative;
+  top: -50px;
+  z-index: 10;
+  background: #fff;
+}
+
+div#poke-view {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 35px;
+  position: relative;
+}
+
+div#poke-view .content{
+  height: fit-content;
+  width: 100%;
+  -webkit-box-shadow: -15px 18px 47px -17px rgba(0,0,0,0.75);
+  -moz-box-shadow: -15px 18px 47px -17px rgba(0,0,0,0.75);
+  box-shadow: -15px 18px 47px -17px rgba(0,0,0,0.75);
+  border: 1px solid #dedede;
+  border-radius: 10px;
+}
+
+.name h2{
+  font-size: 24px;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  color: #1abc9c;
+  border-bottom: 2px solid #1abc9c;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2.hab-title {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #e74c3c;
+  font-weight: bold;
+  border-bottom: 2px solid #e74c3c;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.list-hab ul {
+  margin: 20px auto;
+  width: 80%;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+}
+
+.list-hab ul li:last-child{
+  border: none !important;
+}
+
+.list-hab ul li {
+  font-size: 18px;
+  color: #2c3e50;
+  opacity: 0.8;
+  text-transform: uppercase;
+  border-bottom: 1px solid #dedede;
+  padding: 15px 5px;
+}
+
+.status{
+  color: #2980b9 !important;
+  border-color: #2980b9 !important;
+}
+
+h4.name-poke {
+  padding: 30px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #333;
+  opacity: 0.8;
+}
+
+.poke-status {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+}
+
+ul.status-poke-details li:nth-child(even){
+  background: #dedede
+}
+
+ul.status-poke-details li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  padding-left: 40px;
+  border-bottom: 1px solid #dedede;
+  position: relative;
+}
+
+h3.status-name:first-child {
+  color: #333;
+  opacity: 0.9;
+}
+
+h3.status-name:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #000;
+  float: left;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  background: url(https://image.flaticon.com/icons/svg/1152/1152847.svg);
+  display: block;
+  background-position: center;
+  background-size: cover;
+}
+
+h3.special-defense.status-name:after {
+  background: url(https://cdn0.iconfinder.com/data/icons/website-design-4/467/Protection_icon-512.png) !important;
+  background-position: center;
+  background-size: cover;
+}
+
+.changePok {
+  padding: 50px;
+  text-align: center;
+}
+
+button.chang {
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border-radius: 5px;
+  border: navajowhite;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  background: #2ecc71;
 }

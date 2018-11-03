@@ -41,7 +41,7 @@ export default class Header extends Component {
                 </header>
                 <div className={(this.state.open ? 'open ' : ' ') + ' search'}>
                     <div className="content">
-                        <input type="text" placeholder="bulbasaur..." autofocus />
+                        <input type="text" placeholder="bulbasaur..." autoFocus />
                     </div>
                 </div>
                 <SideBar open={this.state.sideBar} close={this.OpenSideBar}/>
