@@ -2,11 +2,14 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
 *{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif !important;
+
 }
 
 html, body, div, span, applet, object, iframe,
@@ -105,12 +108,23 @@ header#app-poke {
   transition: all .3s ease-in-out;
 }
 
-.open.search {
-  transform: none;
+.open{
+  transform: none !important;
 }
 
 .search .content{
   display: flex;
+}
+
+div#side {
+  position: absolute;
+  top: 0px;
+  width: 80%;
+  height: 100%;
+  background: #34495e;
+  z-index: 9999;
+  transition: all .3s ease;
+  transform: translateX(-100%);
 }
 
 .search input[type="text"] {
@@ -123,3 +137,44 @@ header#app-poke {
 box-shadow: 8px 6px 57px -6px rgba(0,0,0,0.75);
 }
 
+.logo-side {
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0px 50px;
+}
+
+.logo-side img {
+  width: 160px;
+}
+div#side nav ul li {
+  text-align: center;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.social ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.close-side {
+  position: absolute;
+  right: 0px;
+  width: 20%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  top: 0px;
+  z-index: 99999;
+}
+
+.db{
+  display: block;
+}
+
+.dn{
+  display: none;
+}
