@@ -25,6 +25,10 @@ class App extends Component {
 
   }
 
+  componentDidMount(){
+    this.ChangePoke();
+  }
+
   ChangePoke() {
     fetch(`https://pokeapi.co/api/v2/pokemon/${this.state.num}/`)
       .then((resp) => resp.json())
@@ -51,6 +55,7 @@ class App extends Component {
     const max = 100;
     const rand = min + Math.random() * (max - min);
     this.setState({ num: this.state.num + parseInt(rand) });
+    this.ChangePoke();
   }
 
 
